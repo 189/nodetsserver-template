@@ -1,4 +1,4 @@
-# blockchain-service
+# nodetsserver-template
 
 ### Development
 

@@ -1,5 +1,5 @@
 {
-  "name": "block-chain-service",
+  "name": "nodetsserver-template",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/duiyuan/kaas-blockchain-service.git"
+    "url": "git+https://github.com/189/nodetsserver-template.git"
   },
   "lint-staged": {
     "src/**/*.{ts,js}": [
@@ -24,9 +24,9 @@
   "keywords": [],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/duiyuan/kaas-blockchain-service/issues"
+    "url": "https://github.com/189/nodetsserver-template/issues"
   },
-  "homepage": "https://github.com/duiyuan/kaas-blockchain-service#readme",
+  "homepage": "https://github.com/189/nodetsserver-template",
   "author": "",
   "dependencies": {
     "@types/compression": "^1.7.0",
