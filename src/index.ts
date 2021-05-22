@@ -1,13 +1,14 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import bodyParser from "body-parser";
 import compression from "compression";
+import responseTime from "response-time";
 
+import "./initEnv";
 import log4js, { logger } from "./utils/logger";
-import DappRouter from "./routes/dapp";
+import users from "./routes/users";
 
-const SERVER_PORT = 9000;
+const SERVER_PORT = process.env.SERVER_PORT || 9000;
 const DOMAIN = "127.0.0.1";
 const app = express();
 const router = express.Router();
@@ -29,15 +30,21 @@ app.use(
  * }));
  */
 
+app.use(responseTime());
 app.use(compression());
 app.use(cookieParser());
-// parse application/x-www-form-urlencoded;
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/dapp", [DappRouter]);
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+app.use("/users", [users]);
 app.use("/", router);
 
+app.on("error", (err) => {
+  logger.error(err);
+});
+
 router.get("/", (_, res) => {
-  res.send("KaaS Block Chain Server Has Wake Up, Happy Working");
+  res.send("Server Has Wake Up, Happy Working");
 });
 
 app.listen(SERVER_PORT, () => {
