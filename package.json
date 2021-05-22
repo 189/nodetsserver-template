@@ -1,5 +1,5 @@
 {
-  "name": "nodetsserver-template",
+  "name": "template-nodeserver-typescript",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/189/nodetsserver-template.git"
+    "url": "git+https://github.com/189/template-nodeserver-typescript.git"
   },
   "lint-staged": {
     "src/**/*.{ts,js}": [
@@ -24,9 +24,9 @@
   "keywords": [],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/189/nodetsserver-template/issues"
+    "url": "https://github.com/189/template-nodeserver-typescript/issues"
   },
-  "homepage": "https://github.com/189/nodetsserver-template",
+  "homepage": "https://github.com/189/template-nodeserver-typescript",
   "author": "",
   "dependencies": {
     "@types/compression": "^1.7.0",

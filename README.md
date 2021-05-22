@@ -1,4 +1,4 @@
-# nodetsserver-template
+# template-nodeserver-typescript
 
 ### Development
 
@@ -9,7 +9,6 @@
 ```
 $ yarn install // 首次运行
 $ yarn dev
-$ open http://localhost:9000
 ```
 
 #### 关于 development 开发环境
